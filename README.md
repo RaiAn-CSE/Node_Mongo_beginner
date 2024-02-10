@@ -1,3 +1,7 @@
+<ol>
+ <li>At first create a folder without space</li>
+</ol>
+
 At first create a folder without space
 Go to cmd and type code .
 npm init --y : create “package.json” file
