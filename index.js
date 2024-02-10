@@ -8,10 +8,8 @@ const client = new MongoClient(uri);
 async function run() {
     try {
         const listItem = client.db('demo').collection('list');
-
-        // Query for a movie that has the title 'Back to the Future'
+        // Object:
         const info = { name: "raian", Roll: '184r70', Class: "Ten" };
-
         // Use async/await to handle the promise returned by insertOne
         const result = await listItem.insertOne(info);
 
@@ -22,8 +20,6 @@ async function run() {
         }
 
         console.log(result, "result");
-
-
 
     } finally {
         // Ensures that the client will close when you finish/error
