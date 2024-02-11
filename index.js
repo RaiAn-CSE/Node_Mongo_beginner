@@ -10,15 +10,23 @@ async function run() {
     try {
         const listItem = client.db('demo').collection('list');
         // Object:
-        const info = { name: "raian", Roll: '184r70', Class: "Ten" };
-        // Use async/await to handle the promise returned by insertOne
-        const result = await listItem.insertOne(info);
+        const info = { name: "raian", Roll: '123456', Class: "Ten" };
 
-        if (result.acknowledged === true) {
-            console.log('Success');
-        } else {
-            console.log('Failed');
-        }
+        // insert :
+        // const result = await listItem.insertOne(info);
+
+        // if (result.acknowledged === true) {
+        //     console.log('Success');
+        // } else {
+        //     console.log('Failed');
+        // }
+
+        // find :
+        const result = await listItem.findOne(info);
+
+        // we can use all query from document like this : that's it 
+
+
 
         console.log(result, "result");
 
